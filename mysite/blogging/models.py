@@ -1,5 +1,14 @@
+# from .admin import CategoryAdmin, CategoryInline
+# from blogging.admin import CategoryInline
+# from blogging.apps import BloggingConfig
+# from blogging.admin import CategoryInline
+#  import blogging.admin
+#import CategoryInline
+# from duhjango.blogging.admin import CategoryAdmin, CategoryInline
+# from duhjango.blogging.admin import CategoryInline
 from django.db import models
 from django.contrib.auth.models import User
+# from django.db.models.deletion import CASCADE
 
 
 class Post(models.Model):
@@ -9,6 +18,8 @@ class Post(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     modified_date = models.DateTimeField(auto_now=True)
     published_date = models.DateTimeField(blank=True, null=True)
+    # categories = models.ManyToManyField("CategoryInline", blank=True, related_name='posts')
+    # category_entry = models.ForeignKey(to="Category", on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
