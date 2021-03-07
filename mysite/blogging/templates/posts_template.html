@@ -1,0 +1,22 @@
+<DOCTYPE html>
+<html>
+<head>
+<title>edit</title>
+          <link rel="stylesheet" type="text/css" href="/static/rest_framework/css/bootstrap.min.css"/>
+          <link rel="stylesheet" type="text/css" href="/static/rest_framework/css/bootstrap-tweaks.css"/>
+        
+
+        <link rel="stylesheet" type="text/css" href="/static/rest_framework/css/prettify.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/rest_framework/css/default.css"/>
+        
+</head>
+<body>
+ 
+<form method="post" >
+{% csrf_token %}
+{{form}}
+ 
+<button type="submit" class="btn btn-default">Submit</button>
+</form>
+</body>
+</html>
